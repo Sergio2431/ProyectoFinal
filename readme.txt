@@ -1,1 +1,1 @@
-crear repositorio proyecto final 
+Repositorio para proyecto de trueque
