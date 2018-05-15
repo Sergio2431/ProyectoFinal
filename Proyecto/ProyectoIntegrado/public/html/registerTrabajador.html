@@ -9,16 +9,15 @@
   <body>
 
     <div class="form-style-10">
-  <h1>Resgistro Trabajador!</h1>
+  <h1>Registro Trabajador!</h1>
   <form>
       <div class="inner-wrap">
-          <label>Nombre <input type="text" name="nombre" required /></label>
-          <label>Apellidos <input type="text" name="apellidos" required /></label>
-
-          <label>Edad <input type="date" name="direccion" required/></label>
-
+          <label>NIF <input type="text" name="nif" required /></label>
+          <label>Nombre <input type="text" maxlength="20"name="nombre" required /></label>
+          <label>Apellidos <input type="text" maxlength="30" name="apellidos" required /></label>
+          <label>Teléfono <input type="number"  maxlength="9" name="telf" required/></label>
           <label>Email <input type="email" name="email" required /></label>
-          <label>Teléfono <input type="number" name="telefono" required /></label>
+          <label>Direccion <input type="text" maxlength="40"name="direccion" required /></label>
 
           <label>Contraseña <input type="password" name="contrasenya" required /></label>
           <label>Confirmar Contraseña <input type="password" name="re_contrasenya" required /></label>
@@ -29,7 +28,7 @@
 
 
        <span class="privacy-policy">
-       <input type="checkbox" name="field7">You agree to our Terms and Policy.
+       <input type="checkbox" name="field7">Aceptar términos y condiciones de uso.
        </span>
       </div>
   </form>
