@@ -12,16 +12,16 @@
   <h1>Resgistro Trabajador!</h1>
   <form>
       <div class="inner-wrap">
-          <label>Nombre <input type="text" name="nombre" /></label>
-          <label>Apellidos <input type="text" name="apellidos" /></label>
+          <label>Nombre <input type="text" name="nombre" required /></label>
+          <label>Apellidos <input type="text" name="apellidos" required /></label>
 
-          <label>Direcciónoscript <textarea name="direccion"></textarea></label>
+          <label>Edad <input type="date" name="direccion" required/></label>
 
-          <label>Email <input type="email" name="email" /></label>
-          <label>Teléfono <input type="text" name="telefono" /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Teléfono <input type="number" name="telefono" required /></label>
 
-          <label>Contraseña <input type="password" name="contrasenya" /></label>
-          <label>Confirmar Contraseña <input type="password" name="re_contrasenya" /></label>
+          <label>Contraseña <input type="password" name="contrasenya" required /></label>
+          <label>Confirmar Contraseña <input type="password" name="re_contrasenya" required /></label>
       </div>
       <div class="button-section">
        <input type="submit" >
