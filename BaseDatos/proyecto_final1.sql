@@ -38,6 +38,8 @@ CREATE TABLE IF NOT EXISTS `ente` (
   `Email` varchar(50) DEFAULT NULL,
   `Direccion` varchar(50) DEFAULT NULL,
   `Cartera` int(11) DEFAULT NULL,
+  `Apellidos` varchar(50) DEFAULT NULL,
+  `Contrasenya` varchar(50) DEFAULT NULL,
   `Id_ciudad` int(11) DEFAULT NULL,
   PRIMARY KEY (`NIF`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -82,6 +84,7 @@ CREATE TABLE IF NOT EXISTS `servicio` (
   `Horas` int(11) NOT NULL,
   `NIF` varchar(50) NOT NULL,
   `Precio` int(11) NOT NULL,
+  `Descripcion` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`Id_servicio`),
   KEY `FK_servicio_ente_2` (`NIF`),
   CONSTRAINT `FK_servicio_ente_2` FOREIGN KEY (`NIF`) REFERENCES `ente` (`NIF`)
