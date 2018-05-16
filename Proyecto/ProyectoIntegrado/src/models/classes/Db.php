@@ -18,7 +18,7 @@ class Db
 
   function __construct()
   {
-    $config=new Config("localhost","root","","juegos");
+    $config=new Config("localhost","root","","proyecto_integrado(freelancers)");
 
     $this->server=$config->getHost();
     $this->user=$config->getUser();
