@@ -10,20 +10,20 @@
 
     <div class="form-style-10">
   <h1>Crear Oferta</h1>
-  <form>
+  <form class="" action="../../src/models/recibir/crear_oferta.php" method="post">
       <div class="inner-wrap">
-        <label>Nombre <input type="text" name="nombre" maxlength="25" required /></label>
-        <label>Horas <input type="number" name="horas" maxlength="5" required /></label>
-        <label>Precio <input type="number" name="precio" maxlength="5" required /></label>
-        <label>Descripcion <textarea name="descripcion" maxlength="200" rows="8" cols="80"></textarea></label>
+          <label>Nombre <input type="text" name="Nombre" required /></label>
+          <label>Horas <input type="text"  maxlength="20" name="Horas" required /></label>
+          <label>Precio <input type="text" maxlength="30"  name="Precio" required /></label>
+          <label>Descripcion <textarea name="Descripcion" maxlength="200" rows="8" cols="80"></textarea></label>
+          <input type="submit" value="Enviar">
+          <input type="reset" id="limpiar" value="Limpiar">
+          <input type="button" value="Volver" onclick="window.location.href='../index.html'">
       </div>
+
       <div class="button-section">
-       <input type="submit" >
-       <input type="button" value="Volver" onclick="window.location.href='../index.html'">
-
-
        <span class="privacy-policy">
-       <input type="checkbox" name="field7">Aceptar términos y condiciones de uso.
+       <input type="checkbox" required name="field7">Aceptar términos y condiciones de uso.
        </span>
       </div>
   </form>
