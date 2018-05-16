@@ -4,7 +4,7 @@ use Daw\models\classes\Table;
 /**
  *
  */
-class Usuario extends Table
+class Ente extends Table
 {
   function __construct()
   {
@@ -12,7 +12,7 @@ class Usuario extends Table
   }
   public function findAllUsuario()
   {
-    return parent::find("SELECT * FROM Usuarios ");
+    return parent::find("SELECT * FROM ente ");
   }
 
   public function findUsuarioByName($nombre)
@@ -20,13 +20,13 @@ class Usuario extends Table
     return parent::find("SELECT * FROM Usuarios WHERE Name=$nombre");
   }
 
-  public function insertUsuario($_nombre,$_apellidos, $_user_name, $_contrasenya,$_edad, $_curso, $_puntuacion, $_correo)
+  public function insertUsuario($_nif,$_nombre,$_apellidos,$_telefono, $_correo, $_direccion, $_contrasenya)
   {
-    $sql ="INSERT INTO Usuarios (nombre, apellidos,usuario, contrasenya,edad,curso,puntuacion,correo)
-      VALUES ('$_nombre','$_apellidos','$_user_name','$_contrasenya','$_edad','$_curso','$_puntuacion','$_correo')";
+    $sql ="INSERT INTO ente (NIF,Nombre, Apellidos,Telefono, Email, Direccion ,Contrasenya)
+      VALUES ('$_nif','$_nombre','$_apellidos','$_telefono','$_correo','$_direccion','$_contrasenya')";
      return parent::insert($sql);
   }
-
+/*
   public function updateUsuario($_usuario,$_nombre,$_apellidos, $_user_name, $_contrasenya,$_edad, $_curso, $_puntuacion, $_correo)
   {
     $sql ="UPDATE  Usuarios
@@ -41,6 +41,6 @@ class Usuario extends Table
       $sql = "DELETE FROM Usuarios WHERE nombre='$_nombre'";
        return parent::update($sql);
   }
-
+*/
 }
  ?>
