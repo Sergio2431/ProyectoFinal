@@ -1,6 +1,6 @@
--- --------------------------------------------------------
+﻿-- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         10.1.26-MariaDB - mariadb.org binary distribution
+-- Versión del servidor:         10.1.21-MariaDB - mariadb.org binary distribution
 -- SO del servidor:              Win32
 -- HeidiSQL Versión:             9.4.0.5125
 -- --------------------------------------------------------
@@ -16,6 +16,17 @@
 CREATE DATABASE IF NOT EXISTS `proyecto_integrado(freelancers)` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `proyecto_integrado(freelancers)`;
 
+-- Volcando estructura para tabla proyecto_integrado(freelancers).pais
+CREATE TABLE IF NOT EXISTS `pais` (
+  `Id_pais` int(11) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`Id_pais`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla proyecto_integrado(freelancers).pais: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `pais` DISABLE KEYS */;
+/*!40000 ALTER TABLE `pais` ENABLE KEYS */;
+
 -- Volcando estructura para tabla proyecto_integrado(freelancers).ciudad
 CREATE TABLE IF NOT EXISTS `ciudad` (
   `Id_ciudad` int(11) NOT NULL,
@@ -29,6 +40,36 @@ CREATE TABLE IF NOT EXISTS `ciudad` (
 -- Volcando datos para la tabla proyecto_integrado(freelancers).ciudad: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `ciudad` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ciudad` ENABLE KEYS */;
+
+-- Volcando estructura para tabla proyecto_integrado(freelancers).tipo
+CREATE TABLE IF NOT EXISTS `tipo` (
+  `Id_tipo` int(11) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`Id_tipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla proyecto_integrado(freelancers).tipo: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `tipo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo` ENABLE KEYS */;
+
+-- Volcando estructura para tabla proyecto_integrado(freelancers).servicio
+CREATE TABLE IF NOT EXISTS `servicio` (
+  `Id_servicio` int(11) NOT NULL,
+  `Nombre` varchar(50) NOT NULL,
+  `Horas` int(11) NOT NULL,
+  `Precio` int(11) NOT NULL,
+  `Descripcion` varchar(200) DEFAULT NULL,
+  `tipo_servicio` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Id_servicio`),
+  KEY `FK_servicio_servicio` (`tipo_servicio`),
+  CONSTRAINT `FK_servicio_servicio` FOREIGN KEY (`tipo_servicio`) REFERENCES `tipo` (`Id_tipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Volcando datos para la tabla proyecto_integrado(freelancers).servicio: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `servicio` DISABLE KEYS */;
+/*!40000 ALTER TABLE `servicio` ENABLE KEYS */;
+
+
 
 -- Volcando estructura para tabla proyecto_integrado(freelancers).ente
 CREATE TABLE IF NOT EXISTS `ente` (
@@ -66,44 +107,9 @@ CREATE TABLE IF NOT EXISTS `ente_servicio` (
 /*!40000 ALTER TABLE `ente_servicio` DISABLE KEYS */;
 /*!40000 ALTER TABLE `ente_servicio` ENABLE KEYS */;
 
--- Volcando estructura para tabla proyecto_integrado(freelancers).pais
-CREATE TABLE IF NOT EXISTS `pais` (
-  `Id_pais` int(11) NOT NULL,
-  `Nombre` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Id_pais`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla proyecto_integrado(freelancers).pais: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `pais` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pais` ENABLE KEYS */;
 
--- Volcando estructura para tabla proyecto_integrado(freelancers).servicio
-CREATE TABLE IF NOT EXISTS `servicio` (
-  `Id_servicio` int(11) NOT NULL,
-  `Nombre` varchar(50) NOT NULL,
-  `Horas` int(11) NOT NULL,
-  `NIF` varchar(50) NOT NULL,
-  `Precio` int(11) NOT NULL,
-  `Descripcion` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`Id_servicio`),
-  KEY `FK_servicio_ente_2` (`NIF`),
-  CONSTRAINT `FK_servicio_ente_2` FOREIGN KEY (`NIF`) REFERENCES `ente` (`NIF`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla proyecto_integrado(freelancers).servicio: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `servicio` DISABLE KEYS */;
-/*!40000 ALTER TABLE `servicio` ENABLE KEYS */;
-
--- Volcando estructura para tabla proyecto_integrado(freelancers).tipo
-CREATE TABLE IF NOT EXISTS `tipo` (
-  `Id_tipo` int(11) NOT NULL,
-  `Nombre` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Id_tipo`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Volcando datos para la tabla proyecto_integrado(freelancers).tipo: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `tipo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tipo` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
