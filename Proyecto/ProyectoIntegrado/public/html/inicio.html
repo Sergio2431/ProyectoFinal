@@ -5,27 +5,28 @@
     <title>Truequefacil</title>
     <link href="../css/form.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
-
   </head>
   <body>
 
     <div class="form-style-10">
-  <h1>Inicio Sesión</h1>
-  <form>
+  <h1>Crear Oferta</h1>
+  <form class="" action="../../src/models/recibir/login.php" method="post">
       <div class="inner-wrap">
           <label>NIF <input type="text" name="nif" required /></label>
           <label>Contraseña <input type="password" name="contrasenya" required /></label>
+          <br><br>
+          <input type="submit" value="Enviar">
+          <input type="reset" id="limpiar" value="Limpiar">
+          <input type="button" value="Volver" onclick="window.location.href='../index.html'">
       </div>
-      <div class="button-section">
-       <input type="submit" >
-       <input type="button" value="Volver" onclick="window.location.href='../index.html'">
 
-
+      <!--<div class="button-section">
        <span class="privacy-policy">
-       <input type="checkbox" name="field7">Aceptar términos y condiciones de uso.
+       <input type="checkbox" required name="field7">Aceptar términos y condiciones de uso.
        </span>
-      </div>
+     </div>-->
   </form>
   </div>
+
   </body>
 </html>
