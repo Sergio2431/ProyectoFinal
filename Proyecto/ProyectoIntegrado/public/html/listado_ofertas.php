@@ -16,11 +16,18 @@
 
   <body>
 
-
     <!-- Page Content -->
     <div class="container">
 
       <h1 class="my-4">Ofertas</h1>
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item active">Ofertas</li>
+        </ol>
+
       <!-- Marketing Icons Section -->
       <div id="carta" class="row">
         <div class="col-lg-4 mb-4">
@@ -40,7 +47,7 @@
               <p class="card-text">Descripción del trabajo</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Contactar(jalarla)</a>
+              <a href="#" class="btn btn-primary">Contactar</a>
             </div>
           </div>
         </div>
