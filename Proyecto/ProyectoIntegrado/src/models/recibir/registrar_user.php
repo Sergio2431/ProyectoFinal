@@ -5,13 +5,13 @@ use Daw\models\classes\Ente;
 
 <?php
 //Variables recibidas del formulario
-$nif=$_POST['nif'];
-$nombre=$_POST['nombre'];
-$apellidos=$_POST['apellidos'];
-$telef=$_POST['telf'];
-$email=$_POST['email'];
-$direccion=$_POST['direccion'];
-$contrasenya=$_POST['contrasenya'];
+$nif=$_POST['NIF'];
+$nombre=$_POST['Nombre'];
+$apellidos=$_POST['Apellidos'];
+$telef=$_POST['Telefono'];
+$email=$_POST['Email'];
+$direccion=$_POST['Direccion'];
+$contrasenya=$_POST['Contrasenya'];
 //Objeto Ente
 $ente = new Ente();
 $contrasenya= password_hash($contrasenya, PASSWORD_DEFAULT)."\n";
