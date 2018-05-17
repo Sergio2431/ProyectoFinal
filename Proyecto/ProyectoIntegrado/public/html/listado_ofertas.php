@@ -40,7 +40,7 @@
               <p class="card-text">Descripción del trabajo</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Contactar(jalarla)</a>
+              <a href="#" class="btn btn-primary">Contactar</a>
             </div>
           </div>
         </div>
