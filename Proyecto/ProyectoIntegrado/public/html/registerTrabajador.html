@@ -19,20 +19,20 @@
           <label>Email <input type="email" name="email" required /></label>
           <label>Direccion <input type="text" maxlength="40"name="direccion" required /></label>
 
-          <label>Contraseña <input type="password" name="contrasenya" required /></label>
-          <label>Confirmar Contraseña <input type="password" name="re_contrasenya" required /></label>
+          <label>Contraseña <input type="password" id="contrasenya" name="contrasenya" required /></label>
+          <label>Confirmar Contraseña <input type="password" id="re_contrasenya" name="re_contrasenya" required /></label>
 
-          <input type="submit" value="Enviar">
+          <input type="submit" onclick="comprobarContra()" value="Enviar">
           <input type="reset" id="limpiar" value="Limpiar">
           <input type="button" value="Volver" onclick="window.location.href='../index.html'">
       </div>
       <div class="button-section">
        <span class="privacy-policy">
        <input type="checkbox" required name="field7">Aceptar términos y condiciones de uso.
+       <script type='text/javascript' src='../js/comprobar_contra.js'></script>
        </span>
       </div>
   </form>
   </div>
-
   </body>
 </html>
