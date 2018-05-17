@@ -27,7 +27,7 @@ $(document).ready(function()
               //comprobamos el nombre Inicial y el actual antes de comprobarDatos
               //si es el mismo no hacemos nodoImagenEditar
               if(busqueda != envio)
-              if(type != "curso" && type != "edad" &type != "apellidos")
+              if(type == "curso" && type != "edad" &type != "apellidos")
               {
                 $.ajax({
                     type: "POST",
