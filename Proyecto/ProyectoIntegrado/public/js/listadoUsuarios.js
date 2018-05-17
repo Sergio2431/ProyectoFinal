@@ -1,7 +1,5 @@
 var type = "";
-
 var busqueda="";
-
 
 
 $(document).ready(function()
@@ -13,28 +11,26 @@ $(document).ready(function()
 
     $('input').focusout(function()
     {
+      type = $(this).attr('name');
 
-       type = $(this).attr('name');
-
-      document.getElementById(type).style.borderColor = "#E0D68F";
-      document.getElementById("registro").disabled = false;
-
+      if (type != "re_contrasenya")
+      {
               var envio = $(this).val();
               var dataString = 'busqueda='+type+"-"+envio;
-
-
-              console.log(busqueda+"-----"+envio);
               //comprobamos el nombre Inicial y el actual antes de comprobarDatos
               //si es el mismo no hacemos nodoImagenEditar
               if(busqueda != envio)
-              if(type == "curso" && type != "edad" &type != "apellidos")
+              if(type == "NIF"  || type == "Email" )
               {
+                console.log(dataString);
+                //console.log(busqueda+"-----"+envio);
                 $.ajax({
                     type: "POST",
-                    url: "../../src/seguridad/PHP/comprobarDatos.php",
+                    url: "../../src/seguridad/comprobarDatos.php",
                     data: dataString,
                     success: function(data)
                     {
+                      console.log("Devuelto:"+data);
                         if(data == 0 && $("#"+type).val().length > 0)
                         {
                           document.getElementById(type).style.borderColor = "green";
@@ -44,11 +40,12 @@ $(document).ready(function()
                           {
                             document.getElementById(type).style.borderColor = "red";
                             document.getElementById("registro").disabled = true;
-
                           }
                     }
                 });
+
             }
+          }
       });
     });
   });

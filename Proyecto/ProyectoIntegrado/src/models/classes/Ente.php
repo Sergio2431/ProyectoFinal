@@ -17,7 +17,13 @@ class Ente extends Table
 
   public function findUsuarioByNif($nif)
   {
-    return parent::find("SELECT * FROM ente WHERE Name=$nif");
+    return parent::find("SELECT * FROM ente WHERE NIF='$nif'");
+  }
+
+  public function findBaseDatos($_busqueda, $_valor)
+  {
+    //$sql=("SELECT $busqueda FROM ente WHERE '$busqueda'=$valor");
+    return parent::find("SELECT * FROM ente WHERE $_busqueda='$_valor'");
   }
 
   public function insertUsuario($_nif,$_nombre,$_apellidos,$_telefono, $_correo, $_direccion, $_contrasenya)
