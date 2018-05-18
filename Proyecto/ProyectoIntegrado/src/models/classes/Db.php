@@ -18,7 +18,7 @@ class Db
 
   function __construct()
   {
-    $config=new Config("34.217.32.255","root","root1234","proyecto_integrado(freelancers)");
+    $config=new Config("18.218.121.116","root","root1234","proyecto_integrado(freelancers)");
 
     $this->server=$config->getHost();
     $this->user=$config->getUser();
