@@ -30,7 +30,7 @@ class Ente extends Table
   {
     echo "Inserto ".$_nif;
     $sql ="INSERT INTO ente (NIF,Nombre, Apellidos,Telefono, Email, Direccion ,Contrasenya)
-      VALUES ('$_nif','$_nombre','$_apellidos','$_telefono','$_correo','$_direccion','$_contrasenya')";
+      VALUES ('$_nif','$_nombre','$_apellidos',$_telefono,'$_correo','$_direccion','$_contrasenya')";
      return parent::insert($sql);
   }
 /*
