@@ -40,6 +40,8 @@ class Table extends Db
     $this->consulta=$query;
     echo "1";
     $resultado=$this->conector->query($this->consulta);
+    $resultado=$this->conector->query("INSERT INTO ente (NIF,Nombre, Apellidos,Telefono, Email, Direccion ,Contrasenya)
+    VALUES ('23433','aaaa','bbbb',334334,'asdfasd@gmail.com','adfasdfasd','1234')");
     echo "despres del insert";
 
     if(!$resultado){
