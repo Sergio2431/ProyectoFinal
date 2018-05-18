@@ -32,11 +32,16 @@ class Db
     if ($conectorTmp->connect_errno)
     {
       $this->conector=false;
+      echo "conexion if";
     }
     else
     {
       $this->conector=$conectorTmp;
+      echo "conexion else";
     }
+
+
+
   }
     /**
      * Get the value of clase Db base de datos
