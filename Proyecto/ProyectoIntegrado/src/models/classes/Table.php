@@ -39,7 +39,7 @@ class Table extends Db
     echo "abans del insert des de query";
     $this->consulta=$query;
     echo "1";
-    $resultado=$this->conector->query($this->consulta)
+    $resultado=$this->conector->query($this->consulta);
     echo "despres del insert";
 
     if(!$resultado){
