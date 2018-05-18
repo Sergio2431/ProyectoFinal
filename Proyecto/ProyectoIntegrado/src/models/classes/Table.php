@@ -39,10 +39,10 @@ class Table extends Db
     $resultado=$this->conector->query($this->consulta);
 
     if(!$resultado){
-      echo(mysql_error());
+      echo "error"+mysql_error();
     }
     else {
-      echo("correctamente insertado");
+      echo "correctamente insertado";
     }
 
     return $resultado;
