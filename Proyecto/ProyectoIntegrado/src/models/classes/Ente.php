@@ -28,6 +28,7 @@ class Ente extends Table
 
   public function insertUsuario($_nif,$_nombre,$_apellidos,$_telefono, $_correo, $_direccion, $_contrasenya)
   {
+    echo "Inserto ".$_nif;
     $sql ="INSERT INTO ente (NIF,Nombre, Apellidos,Telefono, Email, Direccion ,Contrasenya)
       VALUES ('$_nif','$_nombre','$_apellidos','$_telefono','$_correo','$_direccion','$_contrasenya')";
      return parent::insert($sql);
