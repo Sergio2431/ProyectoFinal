@@ -35,8 +35,11 @@ class Table extends Db
   //insertar Usuario
   public function insert($query)
   {
+
+    echo "abans del insert"
     $this->consulta=$query;
     $resultado=$this->conector->query($this->consulta);
+    echo "despres del insert"
 
     if(!$resultado){
       echo "error"+mysql_error();
