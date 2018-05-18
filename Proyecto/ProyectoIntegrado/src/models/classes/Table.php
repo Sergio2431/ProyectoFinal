@@ -41,6 +41,9 @@ class Table extends Db
     if(!$resultado){
       echo(mysql_error());
     }
+    else {
+      echo("correctamente insertado");
+    }
 
     return $resultado;
   }
