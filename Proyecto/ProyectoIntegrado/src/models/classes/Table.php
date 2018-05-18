@@ -36,7 +36,7 @@ class Table extends Db
   public function insert($query)
   {
 
-    echo "abans del insert"
+    echo "abans del insert des de query";
     /*$this->consulta=$query;
     $resultado=$this->conector->query($this->consulta);
     echo "despres del insert"
@@ -49,7 +49,7 @@ class Table extends Db
     }
 
     return $resultado;*/
-    return 1;
+    //return 1;
   }
   //actualizar usuario
   public function update($query)
