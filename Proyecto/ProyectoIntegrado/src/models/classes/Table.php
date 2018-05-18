@@ -37,6 +37,11 @@ class Table extends Db
   {
     $this->consulta=$query;
     $resultado=$this->conector->query($this->consulta);
+
+    if(!$resultado){
+      echo(mysql_error());
+    }
+
     return $resultado;
   }
   //actualizar usuario
