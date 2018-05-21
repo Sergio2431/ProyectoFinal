@@ -22,6 +22,23 @@
 
       <h1 class="my-4">Ofertas</h1>
 
+      <center>
+        <form name="" method="post" action="listado_ofertas.php" >
+          <select name="0"> Elige un tipo de Oferta </option>
+          <option value="0"> ----Elige un tipo de Oferta---- </option>
+          <option value="1">Diseñador Web</option>
+          <option value="2">Programador</option>
+          <option value="3">Administración y direccion de Empresas</option>
+          <option value="4">Educación Infantil</option>
+          <option value="5">Preparador Físicos</option>
+          <option value="6">Medicina</option>
+          <option value="7">Mécanica</option>
+          <option value="8">Psicologia</option>
+          <option value="9">Educación Secundaria</option>
+          <input type="submit" name="buscar" value="Buscar" />
+        </form>
+      </center> <br><br>
+
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="../index.html">Home</a>
