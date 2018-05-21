@@ -26,10 +26,26 @@
       header('Location: borrarUsuario.html');
 
         } else {
-            $msg = "Usuario o contraseña incorrectos";
-        }
-        echo $msg;
-     ?>
+          ?>
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <title></title>
+            </head>
+            <body>
+              <div class="">
+              <?php
+              $msg = "Usuario o contraseña incorrectos";
+          }
+          </div>
+          ?>
+          echo $msg;
+            </body>
+          </html>
+
+
+
 
   </body>
 </html>

@@ -13,7 +13,7 @@
     <div class="form-style-10">
 
     <div class="inner-wrap">
-    <h1>  Panel de administracion &nbsp &nbsp &nbsp &nbsp   Active Directory</h1>
+    <h1>  Panel de administracion &nbsp &nbsp &nbsp &nbsp    Active Directory</h1>
     <form class="" action="conexionAD.php" method="post">
 Usuario: <input type="text" name="username" value="">
 Contraseña: <input type="password" name="password" value="">
