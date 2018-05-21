@@ -10,6 +10,7 @@
     <title>Truequefacil</title>
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico">
     <!-- Custom styles for this template -->
     <link href="../css/mostrar_usuarios.css" rel="stylesheet">
   </head>
