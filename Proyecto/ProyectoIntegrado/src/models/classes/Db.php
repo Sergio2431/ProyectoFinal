@@ -18,7 +18,7 @@ class Db
 
   function __construct()
   {
-    $config=new Config("18.218.121.116","root","root1234","proyecto_integrado");
+    $config=new Config("34.217.32.255","root","root1234","proyecto_integrado(freelancers)");
 
     $this->server=$config->getHost();
     $this->user=$config->getUser();
@@ -32,16 +32,11 @@ class Db
     if ($conectorTmp->connect_errno)
     {
       $this->conector=false;
-      echo "conexion if";
     }
     else
     {
       $this->conector=$conectorTmp;
-      echo "conexion else";
     }
-
-
-
   }
     /**
      * Get the value of clase Db base de datos

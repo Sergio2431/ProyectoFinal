@@ -4,32 +4,30 @@ use Daw\models\classes\Table;
 /**
  *
  */
-class Ente extends Table
+class Servicio extends Table
 {
   function __construct()
   {
     parent::__construct();
   }
-  public function findAllUsuario()
+  public function findServicios()
   {
-    return parent::find("SELECT * FROM ente ");
+    return parent::find("SELECT * FROM servicio ");
   }
 
-  public function findUsuarioByNif($nif)
-  {
-    return parent::find("SELECT * FROM ente WHERE NIF='$nif'");
-  }
-
+/*
   public function findBaseDatos($_busqueda, $_valor)
   {
-    //$sql=("SELECT $busqueda FROM ente WHERE '$busqueda'=$valor");
-    return parent::find("SELECT * FROM ente WHERE $_busqueda='$_valor'");
-  }
+    //$sql=("SELECT $busqueda FROM servicio WHERE '$busqueda'=$valor");
+    return parent::find("SELECT * FROM servicio WHERE $_busqueda='$_valor'");
+  }*/
 
-  public function insertUsuario($_nif,$_nombre,$_apellidos,$_telefono, $_correo, $_direccion, $_contrasenya)
+
+
+  public function insertServicio( $Nombre, $Horas, $Precio, $Descripcion, $tipo_servicio)
   {
-    $sql ="INSERT INTO ente (NIF,Nombre, Apellidos,Telefono, Email, Direccion ,Contrasenya)
-      VALUES ('$_nif','$_nombre','$_apellidos',$_telefono,'$_correo','$_direccion','$_contrasenya')";
+    $sql ="INSERT INTO servicio (Nombre, Horas,Precio, Descripcion, tipo_servicio)
+      VALUES ('$Nombre','$Horas','$Precio','$Descripcion','$tipo_servicio')";
 
      return parent::insert($sql);
   }
