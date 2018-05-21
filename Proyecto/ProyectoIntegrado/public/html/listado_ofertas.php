@@ -66,12 +66,13 @@
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">Contactar</a>
-            </div>
           </div>
         </div>
       </div>
       <!-- /.row -->
     </div>
+    <input type="button" value="Volver" onclick="window.location.href='../index.html'"> <br><br><br>
+  </div>
     <!-- /.container -->
 
     <!-- Footer -->
