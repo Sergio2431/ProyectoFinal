@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Truequefacil</title>
+    <title>TruequeFacil</title>
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../Imagenes/favicon.ico">
@@ -33,7 +33,7 @@
       <div id="carta" class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Nombre de oferta</h4>
+            <h4 class="card-header">Tipo de oferta</h4>
             <div class="card-body">
               <p class="card-text">Nombre del trabajador</p>
               <label>----------------------------------------</label>
