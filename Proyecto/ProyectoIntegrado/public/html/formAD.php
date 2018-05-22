@@ -18,7 +18,7 @@
       Usuario: <input type="text" name="username" value=""><br>
       Contraseña: <input type="password" name="password" value=""><br>
       <input type="submit" name="" value="Iniciar Sesion ">
-      <input type="button" value="Borrar Usuario" onclick="window.location.href='borrarUsuario.html'">
+      <input type="button" value="ENTRAR" onclick="window.location.href='paneladmin.php'">
       <input style="float:right" type="button" value="Volver" onclick="window.location.href='../index.html'">
     </form>
 </div>
