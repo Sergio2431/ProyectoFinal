@@ -12,17 +12,6 @@ $tipo_servicio=$_POST['tipo_servicio'];
 //Objeto Servicio
 $servicio = new Servicio();
 
-
-/*if($trabajo=="programacion")
-    $tipo_trabajo=1;
-    else if($trabajo == "disenyo")
-        $tipo_trabajo=2;
-        else if($trabajo == "sistemas")
-        $tipo_trabajo=3;*/
-
-
-//Insertar oferta
-
 $servicio->insertServicio($nombre, $horas, $precio,$descripcion,$tipo_servicio);
 
 
