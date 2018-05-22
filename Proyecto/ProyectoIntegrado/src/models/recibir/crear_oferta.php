@@ -42,18 +42,18 @@ $servicio->insertServicio($nombre, $horas, $precio,$descripcion,$tipo_servicio);
 
       p { font-size: xx-large }
 
-</style>
-  </head>
-  <body>
+    </style>
+    </head>
+    <body>
 
-  <div class="w3-panel w3-green">
-    <p align="center">Registrado con éxito</p>
-    <div align="center">
-      <a href="../../../public/index.html">
-        <button class="btn success" >Continuar</button>
-      </a>
-	 </div>
-  </div>
+    <div class="w3-panel w3-green">
+      <p align="center">Registrado con éxito</p>
+      <div align="center">
+        <a href="../../../public/index.html">
+          <button class="btn success" >Continuar</button>
+        </a>
+	    </div>
+    </div>
 
 
   </body>
