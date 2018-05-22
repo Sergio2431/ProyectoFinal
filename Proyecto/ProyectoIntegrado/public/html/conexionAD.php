@@ -23,25 +23,19 @@
         $bind = @ldap_bind($ldap, $ldaprdn, $password);
         if ($bind) {
         	$msg = "Estás logueado como correctamente como $username";
+
       header('Location: borrarUsuario.html');
 
         } else {
-          ?>
-          <!DOCTYPE html>
-          <html>
-            <head>
-              <meta charset="utf-8">
-              <title></title>
-            </head>
-            <body>
-              <div class="">
-              <?php
               $msg = "Usuario o contraseña incorrectos";
+                  echo $msg;
           }
-          
+
           ?>
-          </div>
-          echo $msg;
+
+
+
+
             </body>
           </html>
 
