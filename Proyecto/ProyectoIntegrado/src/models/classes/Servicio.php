@@ -24,12 +24,22 @@ class Servicio extends Table
 
 
 
-  public function insertServicio( $Nombre, $Horas, $Precio, $Descripcion, $tipo_servicio)
+  public function insertServicio($Nombre, $Horas, $Precio, $Descripcion)
   {
-    $sql ="INSERT INTO servicio (Id_servicio, Nombre, Horas,Precio, Descripcion, tipo_servicio)
-      VALUES ('$Nombre','$Horas','$Precio','$Descripcion','$tipo_servicio')";
-
+    $sql ="INSERT INTO servicio (Nombre, Horas,Precio, Descripcion)
+    VALUES ('$Nombre','$Horas','$Precio','$Descripcion')";
      return parent::insert($sql);
+  }
+  public function tipos_trabajo(){
+    $sql ="SELECT * FROM tipo";
+    echo "<div id='lista'>";
+    echo "<select id='lista2'>";
+    foreach ($listado as $fila) {
+      echo "<option>";
+      echo "USUARIO: ". $fila["nombre"]." ". $fila["apellidos"]." ". $fila["edad"]." años ". "Curso: ".$fila["curso"]."<br>";
+    }
+    echo "</select>";
+    echo "</div>";
   }
 /*
   public function updateUsuario($_usuario,$_nombre,$_apellidos, $_user_name, $_contrasenya,$_edad, $_curso, $_puntuacion, $_correo)
