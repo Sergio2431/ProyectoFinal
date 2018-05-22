@@ -1,3 +1,7 @@
+<?php
+require_once "../../src/models/Servicio.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,8 +22,11 @@
           <label>Nombre <input type="text" placeholder="Nombre de la oferta" name="Nombre" required /></label>
           <label>Horas <input type="number" placeholder="Horas de trabajo diario" maxlength="20" name="Horas" required /></label>
           <label>Precio <input type="number" maxlength="30" placeholder="Precio por hora" name="Precio" required /></label>
-          
+
           <label>Tipo de Trabajo</label>
+          <?php
+            //llamar funcion que te imprima los tipos de servicios que hay
+          ?>
           <select name="tipo_trabajo">
             <option value="programacion" name="programacion" >Programación</option>
             <option value="disenyo" name="disenyo" >Diseño</option>
@@ -27,19 +34,6 @@
           </select><br>
 
           <label>Descripcion <textarea name="Descripcion" maxlength="200" placeholder="Pequeña descripción sobre la oferta" rows="8" cols="80"></textarea></label>
-          Tipo de Oferta: <br>
-          <select name="Tipo de Oferta">
-            <option selected value="0"> Elige un tipo de Oferta </option>
-            <option value="1">Diseñador Web</option>
-            <option value="2">Programador</option>
-            <option value="3">Administración y direccion de Empresas</option>
-            <option value="4">Educación Infantil</option>
-            <option value="5">Preparador Físicos</option>
-            <option value="6">Medicina</option>
-            <option value="7">Mécanica</option>
-            <option value="8">Psicologia</option>
-            <option value="9">Educación Secundaria</option>
-          </select><br><br>
           <input type="submit" value="Enviar">
           <input type="reset" id="limpiar" value="Limpiar">
           <input style="float:right" type="button" value="Volver" onclick="window.location.href='../index.html'">
