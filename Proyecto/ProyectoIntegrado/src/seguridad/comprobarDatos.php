@@ -6,10 +6,6 @@ use Daw\models\classes\Ente;
 
 $ente = new Ente();
 
-
-
-
-
       function ComprobarDatos()
       {
 
