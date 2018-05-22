@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Truequefacil</title>
+    <title>TruequeFacil</title>
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../Imagenes/favicon.ico">
@@ -22,9 +22,26 @@
 
       <h1 class="my-4">Ofertas</h1>
 
+      <center>
+        <form name="" method="post" action="listado_ofertas.php" >
+          <select name="0"> Elige un tipo de Oferta </option>
+          <option value="0"> ----Elige un tipo de Oferta---- </option>
+          <option value="1">Diseñador Web</option>
+          <option value="2">Programador</option>
+          <option value="3">Administración y direccion de Empresas</option>
+          <option value="4">Educación Infantil</option>
+          <option value="5">Preparador Físicos</option>
+          <option value="6">Medicina</option>
+          <option value="7">Mécanica</option>
+          <option value="8">Psicologia</option>
+          <option value="9">Educación Secundaria</option>
+          <input type="submit" name="buscar" value="Buscar" />
+        </form>
+      </center> <br><br>
+
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="../index.html">Home</a>
+            <a href="../index.html">Inicio</a>
           </li>
           <li class="breadcrumb-item active">Ofertas</li>
         </ol>
@@ -33,7 +50,7 @@
       <div id="carta" class="row">
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Nombre de oferta</h4>
+            <h4 class="card-header">Tipo de oferta</h4>
             <div class="card-body">
               <p class="card-text">Nombre del trabajador</p>
               <label>----------------------------------------</label>
@@ -49,12 +66,13 @@
             </div>
             <div class="card-footer">
               <a href="#" class="btn btn-primary">Contactar</a>
-            </div>
           </div>
         </div>
       </div>
       <!-- /.row -->
     </div>
+    <input type="button" value="Volver" onclick="window.location.href='../index.html'"> <br><br><br>
+  </div>
     <!-- /.container -->
 
     <!-- Footer -->
