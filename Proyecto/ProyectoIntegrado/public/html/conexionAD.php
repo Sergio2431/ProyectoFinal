@@ -38,8 +38,9 @@
               <?php
               $msg = "Usuario o contraseña incorrectos";
           }
-          </div>
+          
           ?>
+          </div>
           echo $msg;
             </body>
           </html>
