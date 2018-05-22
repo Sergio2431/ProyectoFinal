@@ -13,6 +13,8 @@
     <link rel="shortcut icon" href="../Imagenes/favicon.ico">
     <!-- Custom styles for this template -->
     <link href="../css/mostrar_usuarios.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
   </head>
 
   <body>
@@ -71,7 +73,7 @@
       </div>
       <!-- /.row -->
     </div>
-    <input style="float:right" type="button" value="Volver" onclick="window.location.href='../index.html'"> <br><br><br>
+    <a style="float:right" href="../index.html" class="btn btn-primary">Volver</a><br><br><br>
   </div>
     <!-- /.container -->
 
