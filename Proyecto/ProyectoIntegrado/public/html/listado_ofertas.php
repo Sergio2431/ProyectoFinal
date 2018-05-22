@@ -71,7 +71,7 @@
       </div>
       <!-- /.row -->
     </div>
-    <input type="button" value="Volver" onclick="window.location.href='../index.html'"> <br><br><br>
+    <input style="float:right" type="button" value="Volver" onclick="window.location.href='../index.html'"> <br><br><br>
   </div>
     <!-- /.container -->
 
