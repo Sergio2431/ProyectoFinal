@@ -18,6 +18,14 @@
           <label>Nombre <input type="text" placeholder="Nombre de la oferta" name="Nombre" required /></label>
           <label>Horas <input type="number" placeholder="Horas de trabajo diario" maxlength="20" name="Horas" required /></label>
           <label>Precio <input type="number" maxlength="30" placeholder="Precio por hora" name="Precio" required /></label>
+          
+          <label>Tipo de Trabajo</label>
+          <select name="tipo_trabajo">
+            <option value="programacion" name="programacion" >Programación</option>
+            <option value="disenyo" name="disenyo" >Diseño</option>
+            <option value="sistemas" name="sistemas" >Sistemas</option>
+          </select><br>
+
           <label>Descripcion <textarea name="Descripcion" maxlength="200" placeholder="Pequeña descripción sobre la oferta" rows="8" cols="80"></textarea></label>
           <input type="submit" value="Enviar">
           <input type="reset" id="limpiar" value="Limpiar">

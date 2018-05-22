@@ -26,7 +26,7 @@ class Servicio extends Table
 
   public function insertServicio( $Nombre, $Horas, $Precio, $Descripcion, $tipo_servicio)
   {
-    $sql ="INSERT INTO servicio (Nombre, Horas,Precio, Descripcion, tipo_servicio)
+    $sql ="INSERT INTO servicio (Id_servicio, Nombre, Horas,Precio, Descripcion, tipo_servicio)
       VALUES ('$Nombre','$Horas','$Precio','$Descripcion','$tipo_servicio')";
 
      return parent::insert($sql);
