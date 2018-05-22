@@ -15,10 +15,11 @@
     <div class="inner-wrap">
     <h1>  Panel de administracion &nbsp &nbsp &nbsp &nbsp    Active Directory</h1>
     <form class="" action="conexionAD.php" method="post">
-Usuario: <input type="text" name="username" value="">
-Contraseña: <input type="password" name="password" value="">
-<input type="submit" name="" value="Iniciar Sesion ">
-
+      Usuario: <input type="text" name="username" value=""><br>
+      Contraseña: <input type="password" name="password" value=""><br>
+      <input type="submit" name="" value="Iniciar Sesion ">
+      <input type="button" value="ENTRAR" onclick="window.location.href='paneladmin.php'">
+      <input style="float:right" type="button" value="Volver" onclick="window.location.href='../index.html'">
     </form>
 </div>
 </div>
