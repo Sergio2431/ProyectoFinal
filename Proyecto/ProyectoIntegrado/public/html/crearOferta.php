@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__.'/../../vendor/autoload.php';
-use Daw\models\classes\Servicio;
+use Daw\models\classes\Tipo;
 
-$listado= new Servicio();
+$servicio= new Tipo();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -27,7 +27,7 @@ $listado= new Servicio();
           <label>Tipo de oferta</label>
           <select name="tipo_servicio">
             <?php
-              $trabajos=$listado->findBaseDatos();
+              $trabajos=$servicio->findBaseDatos();
               foreach ($trabajos as $fila) {
                 echo "<option value=".$fila['Id_tipo'].">" .$fila["Nombre"]."</option>";
               }

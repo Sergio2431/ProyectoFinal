@@ -16,12 +16,6 @@ class Servicio extends Table
   }
 
 
-  public function findBaseDatos()
-  {
-    //$sql=("SELECT $busqueda FROM servicio WHERE '$busqueda'=$valor");
-    return parent::find("SELECT * FROM tipo");
-  }
-
 
 
   public function insertServicio($Nombre, $Horas, $Precio, $Descripcion, $tipo_servicio)

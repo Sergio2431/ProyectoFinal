@@ -1,3 +1,14 @@
+<?php
+require_once __DIR__.'/../../vendor/autoload.php';
+use Daw\models\classes\Servicio;
+use Daw\models\classes\Tipo;
+use Daw\models\classes\Ente;
+
+$servicio= new Servicio();
+$ente= new Ente();
+$tipo= new Tipo();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +21,7 @@
     <title>TruequeFacil</title>
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="../Imagenes/favicon.ico">
     <!-- Custom styles for this template -->
     <link href="../css/mostrar_usuarios.css" rel="stylesheet">
@@ -22,30 +34,36 @@
 
       <h1 class="my-4">Ofertas</h1>
 
+
       <center>
         <form name="" method="post" action="listado_ofertas.php" >
-          <select name="0"> Elige un tipo de Oferta </option>
-          <option value="0"> ----Elige un tipo de Oferta---- </option>
-          <option value="1">Diseñador Web</option>
-          <option value="2">Programador</option>
-          <option value="3">Administración y direccion de Empresas</option>
-          <option value="4">Educación Infantil</option>
-          <option value="5">Preparador Físicos</option>
-          <option value="6">Medicina</option>
-          <option value="7">Mécanica</option>
-          <option value="8">Psicologia</option>
-          <option value="9">Educación Secundaria</option>
-          <input type="submit" name="buscar" value="Buscar" />
+          <label>Seleccione el tipo de trabajo:</label>
+          <select name="0">
+            <?php
+              $tipo_oferta=$tipo->findBaseDatos();
+              foreach ($tipo_oferta as $fila) {
+                echo "<option value=".$fila['Id_tipo'].">" .$fila["Nombre"]."</option>";
+              }
+            ?>
+          <!--<input type="submit" name="buscar" onclick="buscar()" value="Buscar" /> -->
+        </select>
+          <button type="button" name="buscar" onclick="return buscar();"></button>
         </form>
       </center> <br><br>
 
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="../index.html">Inicio</a>
-          </li>
-          <li class="breadcrumb-item active">Ofertas</li>
-        </ol>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="../index.html">Inicio</a>
+        </li>
+        <li class="breadcrumb-item active">Ofertas</li>
+      </ol>
 
+      <?php
+        $usuario=$ente->findAllUsuario();
+        foreach ($usuario as $fila) {
+          echo "Nombre: ".$fila["Nombre"]."nif".$fila["NIF"]."<br>";
+        }
+      ?>
       <!-- Marketing Icons Section -->
       <div id="carta" class="row">
         <div class="col-lg-4 mb-4">
@@ -84,8 +102,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="../js/listado_ofertas.js"></script>
 
   </body>
 
