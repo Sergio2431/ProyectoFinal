@@ -7,7 +7,7 @@ $nombre=$_POST['Nombre'];
 $horas=$_POST['Horas'];
 $precio=$_POST['Precio'];
 $descripcion=$_POST['Descripcion'];
-$tipo_trabajo=$_POST['tipo_trabajo'];
+$tipo_servicio=$_POST['tipo_servicio'];
 
 //Objeto Servicio
 $servicio = new Servicio();
@@ -23,6 +23,8 @@ $servicio = new Servicio();
 
 //Insertar oferta
 
-$servicio->insertServicio($nombre, $horas, $precio,$descripcion);
+$servicio->insertServicio($nombre, $horas, $precio,$descripcion,$tipo_servicio);
+
+
 
 ?>

@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__.'/../../vendor/autoload.php';
+use Daw\models\classes\Servicio;
+
+$listado= new Servicio();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,21 +24,16 @@
           <label>Nombre <input type="text" placeholder="Nombre de la oferta" name="Nombre" required /></label>
           <label>Horas <input type="number" placeholder="Horas de trabajo diario" maxlength="20" name="Horas" required /></label>
           <label>Precio <input type="number" maxlength="30" placeholder="Precio por hora" name="Precio" required /></label>
-
-          <label> Tipo de Oferta:</label>
-          <select name="tipo_trabajo">
-            <option selected value="0"> Elige un tipo de Oferta </option>
-            <option value="1">Diseñador Web</option>
-            <option value="2">Programador</option>
-            <option value="3">Administración y direccion de Empresas</option>
-            <option value="4">Educación Infantil</option>
-            <option value="5">Preparador Físicos</option>
-            <option value="6">Medicina</option>
-            <option value="7">Mécanica</option>
-            <option value="8">Psicologia</option>
-            <option value="9">Educación Secundaria</option>
-          </select><br><br>
-
+          <label>Tipo de oferta</label>
+          <select name="tipo_servicio">
+            <?php
+              $trabajos=$listado->findBaseDatos();
+              foreach ($trabajos as $fila) {
+                echo "<option value=".$fila['Id_tipo'].">" .$fila["Nombre"]."</option>";
+              }
+            ?>
+          </select>
+          <br><br>
           <label>Descripcion <textarea name="Descripcion" maxlength="200" placeholder="Pequeña descripción sobre la oferta" rows="8" cols="80"></textarea></label>
 
           <input type="submit" value="Enviar">
