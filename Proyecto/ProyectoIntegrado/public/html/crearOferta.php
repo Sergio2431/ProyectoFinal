@@ -8,7 +8,7 @@ $servicio= new Tipo();
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TruequeFacil</title>
+    <title>Crear-Oferta</title>
     <link href="../css/form.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="../Imagenes/favicon.ico">
     <link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">

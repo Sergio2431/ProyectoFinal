@@ -16,16 +16,20 @@
 <div class="inner-wrap">
 <form class="" action="" method="post">
   <input type="submit" name="" value="Borrar Oferta" >
-
+  <input style="float:right" type="button" value="Borrar usuario" onclick="window.location.href='../borrarUsuario.html'">
   </form>
 
   </div>
-  <div class="inner-wrap">
-
-  <form class="" action="borrarUsuario.html" method="post">
-    <input type="submit" name="" value="Borrar Usuario">
-  </form>
 </center>
+
+  <div class="inner-wrap">
+  <form class="" action="" method="post">
+
+    <input style="float:right" type="button" value="Volver" onclick="window.location.href='../formAD.php'">
+    </form>
+
+    </div>
+
 </div>
   </div>
   </body>
