@@ -18,7 +18,7 @@ $tipo= new Tipo();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Buscar-Oferta</title>
+    <title>TruequeFacil</title>
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -59,51 +59,46 @@ $tipo= new Tipo();
         </li>
         <li class="breadcrumb-item active">Ofertas</li>
       </ol>
+      <table>
+        <tr>
+          <?php
+            $usuario=$ente->findAllUsuario();
+            $trabajos=$servicio->findServicios();
+            foreach ($trabajos as $fila2) {
+              foreach ($usuario as $fila) {
+                echo '<td>
+                <div id="carta" class="row">
+                  <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                      <h4 class="card-header">Tipo de oferta</h4>
+                        <div class="card-body">
+                          <b><p class="card-text">Nombre del trabajador</p></b>
+                          <label>'.$fila["Nombre"].'</label>
+                          <b><p class="card-text">Telefono del trabajador</p></b>
+                          <label>'.$fila["Telefono"].'</label>
+                          <b><p class="card-text">Correo del trabajador</p></b>
+                          <label>'.$fila["Email"].'</label>
+                          <b><p class="card-text">Horas de trabajo diario </p></b>
+                          <label>'.$fila2["Horas"].'</label>
+                          <b><p class="card-text">Costo por hora</p></b>
+                          <label>'.$fila2["Precio"].'</label>
+                          <b><p class="card-text">Descripción del trabajo</p></b>
+                          <label>'.$fila2["Descripcion"].'</label>
+                        </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Contactar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </td>';
+              }
+            }
+            ?>
+        </tr>
+      </table>
 
-      <?php
-        $usuario=$ente->findAllUsuario();
-        foreach ($usuario as $fila) {
-          echo "Nombre: ".$fila["Nombre"]."nif".$fila["NIF"]."<br>";
-        }
-      ?>
-      <!-- Marketing Icons Section -->
-      <div id="carta" class="row">
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header">Tipo de oferta</h4>
-            <div class="card-body">
-              <p class="card-text">Nombre del trabajador</p>
-              <label>----------------------------------------</label>
-              <p class="card-text">Telefono del trabajador</p>
-              <label>----------------------------------------</label>
-              <p class="card-text">Correo del trabajador</p>
-              <label>----------------------------------------</label>
-              <p class="card-text">Horas de trabajo diario </p>
-              <label>----------------------------------------</label>
-              <p class="card-text">Costo por hora</p>
-              <label>----------------------------------------</label>
-              <p class="card-text">Descripción del trabajo</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Contactar</a>
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
-    </div>
-    <a style="float:right" href="../index.html" class="btn btn-primary">Volver</a><br><br><br>
-  </div>
-    <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; FLORIDA UNIVERSITARIA</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
 
     <script type="text/javascript" src="../js/listado_ofertas.js"></script>
 
