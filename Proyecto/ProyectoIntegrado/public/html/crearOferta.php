@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__.'/../../vendor/autoload.php';
+use Daw\models\classes\Servicio;
 use Daw\models\classes\Tipo;
+use Daw\models\classes\Ente;
 
 $servicio= new Tipo();
 ?>
