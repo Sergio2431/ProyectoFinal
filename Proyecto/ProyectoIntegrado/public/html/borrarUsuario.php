@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+
+<?php
+
+require_once __DIR__.'/../../vendor/autoload.php';
+use Daw\models\classes\Servicio;
+use Daw\models\classes\Tipo;
+use Daw\models\classes\Ente;
+
+$servicio= new Ente();
+
+
+ ?>
     <meta charset="utf-8">
     <title>TruequeFacil</title>
     <link href="../css/form.css" rel="stylesheet" type="text/css">
@@ -10,17 +22,17 @@
   <body>
 
     <div class="form-style-10">
-  <h1>Eliminar Oferta</h1>
+  <h1>Eliminar Usuario</h1>
   <form class="" action="../../src/models/recibir/login.php" method="post">
       <div class="inner-wrap">
-        <select name="NIF">
-         <option value="1"></option>
-         <option value="2"></option>
-         <option value="3"></option>
-         <option value="4"></option>
-         <option value="5"></option>
-         <option value="6"></option>
-       </select>
+        <select name="tipo_servicio">
+          <?php
+            $trabajos=$servicio->findUsuarioByNif();
+            foreach ($trabajos as $fila) {
+              echo "<option value=".$fila['nif'].">" .$fila["Nombre"]."</option>";
+            }
+          ?>
+        </select>
        <br><br><br>
           <input type="submit" value="Eliminar">
           <input type="reset" id="limpiar" value="Limpiar">
