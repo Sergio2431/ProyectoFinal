@@ -10,10 +10,10 @@
 
     <title>TruequeFacil</title>
     <!-- Bootstrap core CSS -->
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
-    <link rel="shortcut icon" href="Imagenes/favicon.ico">
+    <link href="../css/modern-business.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico">
   </head>
 
   <body>
@@ -21,8 +21,8 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <img src="Imagenes/Logo.png " width="40" height="40"> &emsp;
-        <a class="navbar-brand" href="index.html"> TruequeFacil</a>
+      <img src="../Imagenes/Logo.png " width="40" height="40"> &emsp;
+        <a class="navbar-brand" href="inicioSesion.html"> TruequeFacil</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,10 +31,10 @@
 
 
             <li class="nav-item">
-              <a class="nav-link" href="html/inicio.html">Inicio Sesión</a>
+              <a class="nav-link" href="html/inicio.html">Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/registerTrabajador.html">Registrar Trabajador</a>
+              <a class="nav-link" href="html/registerTrabajador.html">Ajustes</a>
             </li>
 
             <li class="nav-item">
@@ -54,7 +54,7 @@
 
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('Imagenes/ImagenesIndex/fondoWebIni.jpg')">
+          <div class="carousel-item active" style="background-image: url('../Imagenes/ImagenesIndex/fondoWebIni.jpg')">
 
           </div>
         </div>
@@ -66,13 +66,38 @@
     <div class="container">
       <h1 class="my-4">Opciones</h1>
       <!-- Marketing Icons Section -->
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Ofertas</h4>
+            <div class="card-body">
+              <center><p class="card-text">Crear Oferta</p></center>
+            </div>
+            <center><img src="../Imagenes/ImagenesIndex/inscribir.png" alt="Imagen contactar" width="300" height="150"></center>
+            <div class="card-footer">
+              <a href="html/crearOferta.php" class="btn btn-primary">Crear</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Ofertas</h4>
+            <div class="card-body">
+              <center><p class="card-text">Buscar Ofertas</p></center>
+            </div>
+            <center><img src="../Imagenes/ImagenesIndex/buscar.png" alt="Imagen contactar" width="200" height="150"></center>
+            <div class="card-footer">
+              <a href="html/listado_ofertas.php" class="btn btn-primary">Buscar</a>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header">Atención al Cliente</h4>
             <div class="card-body">
               <center><p class="card-text">Te ayudamos en tus preguntas</p></center>
             </div>
-            <center><img src="Imagenes/ImagenesIndex/duda.png" alt="Imagen contactar" width="200" height="150"></center>
+            <center><img src="../Imagenes/ImagenesIndex/duda.png" alt="Imagen contactar" width="200" height="150"></center>
             <div class="card-footer">
               <a href="html/contact.html" class="btn btn-primary">Ayuda</a>
             </div>
