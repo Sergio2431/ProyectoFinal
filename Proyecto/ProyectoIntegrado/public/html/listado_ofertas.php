@@ -36,30 +36,13 @@ $tipo= new Tipo();
 
       <h1 class="my-4">Ofertas</h1>
 
-
-      <center>
-        <form name="" method="post" action="listado_ofertas.php" >
-          <label>Seleccione el tipo de trabajo:</label>
-          <select name="0">
-            <?php
-              $tipo_oferta=$tipo->findBaseDatos();
-              foreach ($tipo_oferta as $fila) {
-                echo "<option value=".$fila['Id_tipo'].">" .$fila["Nombre"]."</option>";
-              }
-            ?>
-          <!--<input type="submit" name="buscar" onclick="buscar()" value="Buscar" /> -->
-        </select>
-          <button type="button" name="buscar" onclick="return buscar();"></button>
-        </form>
-      </center> <br><br>
-
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <a href="../index.html">Inicio</a>
         </li>
         <li class="breadcrumb-item active">Ofertas</li>
       </ol>
-      <table>
+      <table id="tabla_ofertas">
         <tr>
           <?php
             $usuario=$ente->findAllUsuario();
