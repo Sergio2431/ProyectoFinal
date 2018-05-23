@@ -35,6 +35,12 @@ class Sesion extends Table
     return parent::find("SELECT * FROM ente WHERE NIF='$_nif'");
   }
 
+  //nos devuelve la contraseña encriptada
+  public function returnPass($_nif)
+  {
+    return parent::find("SELECT Contrasenya FROM ente WHERE NIF='$_nif'");
+  }
+
 //busqueda del nif para el logeo
   public function loginSearch($_nif,$_pass)
   {

@@ -8,11 +8,23 @@ $nif=$_POST['nif'];
 $contrasenya=$_POST['contrasenya'];
 //Objeto Sesion
 $sesion = new Sesion();
+/*
+$pass=$sesion->returnPass($nif);
+$obj = mysqli_fetch_object($pass);
+echo $obj->Contrasenya;
+
+if (password_verify($contrasenya, $obj->Contrasenya)) {
+    echo '¡La contraseña es válida!';
+} else {
+    echo 'La contraseña no es válida.';
+}
+*/
 
 $resultado= $sesion->loginSearch($nif,$contrasenya);
-
 $contar = mysqli_num_rows($resultado);
-echo $contar;
+
+
+
 if($contar >= 1)
 {
     $sesion->login($nif);
@@ -22,7 +34,11 @@ if($contar >= 1)
 }
 
 else
+{
    echo "<script type='text/javascript'>alert('Error de Usuario o Contraseña');
    window.location='../../../public/index.html';
    </script>";
+}
+
+
 ?>
