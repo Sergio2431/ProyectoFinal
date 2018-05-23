@@ -42,12 +42,12 @@ class Ente extends Table
         WHERE nombre='$_usuario'";
      return parent::update($sql);
   }
-
-  public function deleteUsuario($_nombre)
-  {
-      $sql = "DELETE FROM Usuarios WHERE nombre='$_nombre'";
-       return parent::update($sql);
-  }
 */
+  public function deleteUsuario($_nif)
+  {
+      $sql = "DELETE FROM ente WHERE NIF='$_nif'";
+       return parent::delete($sql);
+  }
+
 }
  ?>

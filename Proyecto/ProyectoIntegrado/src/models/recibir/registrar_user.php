@@ -14,7 +14,7 @@ $direccion=$_POST['Direccion'];
 $contrasenya=$_POST['Contrasenya'];
 //Objeto Ente
 $ente = new Ente();
-$contrasenya= password_hash($contrasenya, PASSWORD_DEFAULT)."\n";
+//$contrasenya= password_hash($contrasenya, PASSWORD_DEFAULT);
 $ente->insertUsuario($nif,$nombre,$apellidos,$telef,$email,$direccion,$contrasenya);
 ?>
 <!DOCTYPE html>

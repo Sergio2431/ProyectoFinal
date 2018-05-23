@@ -34,12 +34,12 @@ class Servicio extends Table
         WHERE nombre='$_usuario'";
      return parent::update($sql);
   }
-
-  public function deleteUsuario($_nombre)
-  {
-      $sql = "DELETE FROM Usuarios WHERE nombre='$_nombre'";
-       return parent::update($sql);
-  }
 */
+  public function deleteUsuario($_id_servicio)
+  {
+      $sql = "DELETE FROM servicio WHERE Id_servicio='$_id_servicio'";
+       return parent::delete($sql);
+  }
+
 }
  ?>
