@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Truequefacil</title>
+    <link href="../css/form.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../Imagenes/favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/listadoUsuarios.js"></script>
+  </head>
+  <body>
+
+    <div class="form-style-10">
+  <h1>Estas seguro que quieres salir?</h1>
+  <form action="../../src/models/recibir/registrar_user.php" method="post">
+      <div class="inner-wrap">
+          <input type="reset" id="Aceptar" value="Aceptar" onclick="window.location.href='../index.html'" >
+          <input style="float:right" type="button" value="Cancelar" onclick="window.location.href='inicioSesion.html'">
+      </div>
+      <div class="button-section">
+       <span class="privacy-policy">
+       <script type='text/javascript' src='../js/comprobar_contra.js'></script>
+       </span>
+      </div>
+  </form>
+  </div>
+  </body>
+</html>

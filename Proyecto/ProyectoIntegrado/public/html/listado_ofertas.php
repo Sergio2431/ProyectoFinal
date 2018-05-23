@@ -18,7 +18,7 @@ $tipo= new Tipo();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>TruequeFacil</title>
+    <title>Buscar-Oferta</title>
     <!-- Bootstrap core CSS -->
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
