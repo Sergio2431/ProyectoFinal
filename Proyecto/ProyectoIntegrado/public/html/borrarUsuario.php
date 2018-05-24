@@ -35,15 +35,11 @@ $servicio= new Ente();
           ?>
         </select>
        <br><br><br>
-          <input type="submit" value="Eliminar" >
+          <input type="submit" value="Eliminar" onclick="return deleteUsuario();">
           <input type="reset" id="limpiar" value="Limpiar">
           <input type="button" value="Volver" onclick="window.location.href='formAD.php'">
       </div>
-<?php
 
-$servicio->deleteUsuario();
-
- ?>
 
 
       <!--<div class="button-section">
