@@ -33,6 +33,11 @@ class Servicio extends Table
     return parent::insert($sql);
   }
 
+  public function mostrarOfertas(){
+    $sql = "SELECT * FROM ente LEFT JOIN ente_servicio INNER JOIN servicio ON ente_servicio.Id_servicio = servicio.Id_servicio ON ente_servicio.NIF = ente.NIF";
+    return parent::find($sql);
+  }
+
 /*
   public function updateUsuario($_usuario,$_nombre,$_apellidos, $_user_name, $_contrasenya,$_edad, $_curso, $_puntuacion, $_correo)
   {

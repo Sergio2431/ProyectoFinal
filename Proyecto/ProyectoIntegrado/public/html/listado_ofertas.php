@@ -47,35 +47,58 @@ $tipo= new Tipo();
           <?php
             $usuario=$ente->findAllUsuario();
             $trabajos=$servicio->findServicios();
-            foreach ($trabajos as $fila2) {
-              foreach ($usuario as $fila) {
-                echo '<td>
-                <div id="carta" class="row">
-                  <div class="col-lg-4 mb-4">
-                    <div class="card h-100">
-                      <h4 class="card-header">Tipo de oferta</h4>
-                        <div class="card-body">
-                          <b><p class="card-text">Nombre del trabajador</p></b>
-                          <label>'.$fila["Nombre"].'</label>
-                          <b><p class="card-text">Telefono del trabajador</p></b>
-                          <label>'.$fila["Telefono"].'</label>
-                          <b><p class="card-text">Correo del trabajador</p></b>
-                          <label>'.$fila["Email"].'</label>
-                          <b><p class="card-text">Horas de trabajo diario </p></b>
-                          <label>'.$fila2["Horas"].'</label>
-                          <b><p class="card-text">Costo por hora</p></b>
-                          <label>'.$fila2["Precio"].'</label>
-                          <b><p class="card-text">Descripción del trabajo</p></b>
-                          <label>'.$fila2["Descripcion"].'</label>
-                        </div>
-                      <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Contactar</a>
+            $ofertas=$servicio->mostrarOfertas();
+            $contador=1;
+            foreach ($ofertas as $fila) {
+              if($contador==1){
+                ?>
+                <div class="container">
+                  <div class="row">
+                <?php
+              }
+              ?>
+                    <div class="col">
+                      <div class="card h-100">
+                        <h4 class="card-header">Tipo de oferta</h4>
+                          <div class="card-body">
+                            <b><p class="card-text">Nombre de la oferta</p></b>
+                            <label><?=$fila["Nombre"]?></label>
+                            <b><p class="card-text">Telefono del trabajador</p></b>
+                            <label><?=$fila["Telefono"]?></label>
+                            <b><p class="card-text">Correo del trabajador</p></b>
+                            <label><?=$fila["Email"]?></label>
+                            <b><p class="card-text">Horas de trabajo diario </p></b>
+                            <label><?=$fila["Horas"]?></label>
+                            <b><p class="card-text">Costo por hora</p></b>
+                            <label><?=$fila["Precio"]?></label>
+                            <b><p class="card-text">Descripción del trabajo</p></b>
+                            <label><?=$fila["Descripcion"]?></label>
+                          </div>
+                          <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Contactar</a>
+                          </div>
                       </div>
                     </div>
+              <?php
+              $contador++;
+              if($contador==4)
+              {
+                ?>
                   </div>
                 </div>
-                </td>';
+                <br>
+                <?php
+                $contador=1;
               }
+            }
+            if($contador<4){
+              for ($i=$contador; $i <4 ; $i++) {
+                echo"<div class='col'></div>";
+              }
+              ?>
+                </div>
+              </div>
+              <?php
             }
             ?>
         </tr>
