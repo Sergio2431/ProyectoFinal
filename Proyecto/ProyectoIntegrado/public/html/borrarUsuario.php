@@ -23,21 +23,28 @@ $servicio= new Ente();
 
     <div class="form-style-10">
   <h1>Eliminar Usuario</h1>
-  <form class="" action="../../src/models/recibir/login.php" method="post">
+
+  <form class="" action="" method="post">
       <div class="inner-wrap">
-        <select name="tipo_servicio">
+        <select name="borrar_usuario">
           <?php
-            $trabajos=$servicio->findUsuarioByNif();
+            $trabajos=$servicio->findForNIF();
             foreach ($trabajos as $fila) {
-              echo "<option value=".$fila['nif'].">" .$fila["Nombre"]."</option>";
+              echo "<option value=".$fila['nif'].">".$fila['nif']."</option>";
             }
           ?>
         </select>
        <br><br><br>
-          <input type="submit" value="Eliminar">
+          <input type="submit" value="Eliminar" >
           <input type="reset" id="limpiar" value="Limpiar">
           <input type="button" value="Volver" onclick="window.location.href='formAD.php'">
       </div>
+<?php
+
+$servicio->deleteUsuario();
+
+ ?>
+
 
       <!--<div class="button-section">
        <span class="privacy-policy">
