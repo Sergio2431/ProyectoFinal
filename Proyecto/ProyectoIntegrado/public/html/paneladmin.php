@@ -16,7 +16,7 @@
 <div class="inner-wrap">
 <form class="" action="" method="post">
   <input type="submit" name="" value="Borrar Oferta" >
-  <input style="float:right" type="button" value="Borrar usuario" onclick="window.location.href='../borrarUsuario.php'">
+  <input style="float:right" type="button" value="Borrar usuario" onclick="window.location.href='borrarUsuario.php'">
   </form>
 
   </div>

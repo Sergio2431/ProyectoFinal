@@ -14,6 +14,11 @@ class Ente extends Table
   {
     return parent::find("SELECT * FROM ente ");
   }
+//Buscar por NIF
+  public function findForNIF()
+  {
+    return parent::find("SELECT nif FROM ente ");
+  }
 
   public function findUsuarioByNif($nif)
   {
