@@ -5,6 +5,7 @@ use Daw\models\classes\Tipo;
 use Daw\models\classes\Ente;
 
 $servicio= new Tipo();
+$encontrar=new Servicio();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -23,6 +24,7 @@ $servicio= new Tipo();
   <form class="" action="../../src/models/recibir/crear_oferta.php" method="post">
       <div class="inner-wrap">
         <div class="container">
+          <label>NIF <input type="text" placeholder="NIF personal" name="NIF" required /></label>
           <label>Nombre <input type="text" placeholder="Nombre de la oferta" name="Nombre" required /></label>
           <label>Horas <input type="number" placeholder="Horas de trabajo diario" maxlength="20" name="Horas" required /></label>
           <label>Precio <input type="number" maxlength="30" placeholder="Precio por hora" name="Precio" required /></label>

@@ -2,7 +2,7 @@
 require_once __DIR__.'/../../../vendor/autoload.php';
 use Daw\models\classes\Servicio;
 
-
+$nif=$_POST['NIF'];
 $nombre=$_POST['Nombre'];
 $horas=$_POST['Horas'];
 $precio=$_POST['Precio'];
@@ -45,7 +45,12 @@ $servicio->insertServicio($nombre, $horas, $precio,$descripcion,$tipo_servicio);
     </style>
     </head>
     <body>
-
+    <?php
+      $prueba=$servicio->selectMax();
+      $ultimo_insertado= ($prueba->fetch_assoc()["ultimo"]);
+      echo $ultimo_insertado;
+      $servicio->insertEnteServicio($nif,$ultimo_insertado);
+    ?>
     <div class="w3-panel w3-green">
       <p align="center">Registrado con éxito</p>
       <div align="center">
